@@ -1,0 +1,76 @@
+pipeline {
+    agent {
+       docker {
+            image 'cypress/included:13.14.2'  // Cypress Docker image
+            args '-u root'  // run as root user to avoid permission issues
+       }
+    }
+
+    stages {
+        stage('Build') {
+            steps {
+                script {
+                    // Get latest code
+                    checkout scm
+                    
+                    // Build the code with npm 
+                    echo 'Building the code...'
+                    sh 'npm install'
+                    sh 'npm run build'
+                    
+                    // Archive the build artifact to preserve it
+                    archiveArtifacts artifacts: 'dist/**', allowEmptyArchive: true
+                }
+            }
+            post {
+                success {
+                    echo 'Build stage successful.'
+                }
+                failure {
+                    echo 'Build stage failed.'
+                }
+            }
+        }
+        
+        stage('Test') {
+            steps {
+                script {
+                    // run cypress tests
+                    echo 'Running tests...'
+                    sh 'npm test'
+                }
+            }
+            post {
+                success {
+                    echo 'Test stage successful.'
+                }
+                failure {
+                    echo 'Test stage failed.'
+                }
+            }
+        }
+        
+        stage('Deploy') {
+            steps {
+                script {
+                    // Deploy the application
+                    echo 'Deploying the application...'
+                }
+            }
+            post {
+                success {
+                    echo 'Deploy stage successful.'
+                }
+                failure {
+                    echo 'Deploy stage failed.'
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            echo 'Pipeline completed.'
+        }
+    }
+}
