@@ -1,0 +1,145 @@
+/*style of topbar*/
+.topbar{
+  background-color: #FFD966;
+  overflow: auto; /*add scrollbars when necessery*/
+}
+ /*style of topbar text*/
+.topbar a {
+  float: left;
+  color: black;
+  padding: 3% 3%;
+  text-decoration: none;
+  font-size: 100%;
+  text-align: center;
+}
+/*what happens when mouse is over the text*/
+.topbar a:hover {
+  color: #f1f1f1;
+}
+/*how the pic should be*/
+.pic{
+  width: 100%;
+}
+
+/*style of buttons*/
+#b1{
+  background-color: #FFD966; 
+  border: 1;
+  padding: 2%;/*size*/
+  text-align: center;
+  display: block;
+  font-size: 16px;/*text size*/
+  position:relative; 
+  top:-5px; /*postioning*/
+  left: 25%;/*postioning*/
+  width:50%;/*postioning*/
+}
+/*style of links*/
+#b{
+  color: black;
+}
+#b:link{
+  text-decoration: none;
+}
+#b:hover{
+  color: #f1f1f1;
+}
+ /*style of submit buttons*/
+#b2:hover{
+  background-color: #FFD966;
+}
+
+.box{
+  border: 3px solid black;
+  background-color: #FFFAD7;
+  margin: 1%;
+  padding: 3%; /*size of box*/
+}
+
+/*style of the buttons with the answers in them*/
+.b5{
+  margin: auto;
+  padding: 10px;
+  height: 20px;
+  width: 50%;
+  border: 3px black solid;
+  background-color: #FFD966;
+}
+/*colour when buttons with the answers in them are pressed*/
+.applyBrown1, .applyBrown2, .applyBrown3, .applyBrown4, .applyBrown5, .applyBrown6, .applyBrown7, .applyBrown8, .applyBrown9, .applyBrown10, .applyBrown11, .applyBrown12 
+{
+  background-color:#AD8E70;
+}
+/*style of 'increase'&'decrease' buttons*/
+.b3{
+  margin:auto;
+  display: inline-block;
+  border: 3px solid black;
+  padding: 1% 10%;
+  vertical-align: middle;
+  background-color: #FFD966;
+}
+.b3:hover{
+  background-color: #AD8E70;
+}
+/*style of final submit button*/
+#b4{
+  margin:auto;
+  display: inline-block;
+  border: 3px solid black;
+  padding: 3% 10%;
+  vertical-align: middle;
+  background-color: #FFD966;
+}
+#b4:hover{
+  background-color: #AD8E70;
+}
+
+.b2{
+  position:relative;
+  left: -45%;
+  margin: auto;
+  padding: 10px;
+  height: 20px;
+  width: 5%;
+  border: 3px black solid;
+  background-color: #FFD966;
+}
+ 
+/*grammar quiz ones*/
+.b6{
+  position:relative;
+  left: -45%;
+  margin: auto;
+  padding: 10px;
+  height: 20px;
+  width: 5%;
+  border: 3px black solid;
+  background-color: #FFD966;
+}
+/*colour when buttons with the answers in them are pressed*/
+.applyBrown1, .applyBrown2, .applyBrown3, .applyBrown4, .applyBrown5, .applyBrown6, .applyBrown7, .applyBrown8, .applyBrown9, .applyBrown10, .applyBrown11, .applyBrown12 
+{
+  background-color:#AD8E70;
+}
+
+/*style for text bars*/
+#Input{
+  position:relative;
+  background-color:#FFD966;
+  width:70%;
+  padding: 1%;
+  font-size:100%;
+}
+
+#B1{
+  position:relative;
+  background-color:#FFD966;
+  padding: 2%;
+  font-size:100%;
+  left: 13.7%;
+  width:72.5%; 
+}
+#B1:hover {
+  color: #f1f1f1;
+}
