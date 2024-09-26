@@ -1,0 +1,1502 @@
+<div id="app">
+      <comp1></comp1>
+      <div><img v-bind:src="img" class="pic"></div>
+  <router-view></router-view>
+</div>
+
+<div id="everything">
+
+<script type="text/x-template" id="register">
+<div>
+<h1><center>Register</center></h1>
+<center><input id="Input" type="text" v-bind:title='message1' v-model="input1"></input><br>
+  <input id="Input" type="text" v-bind:title='message2' v-model="input2"></input><br>
+  <input id="Input" type="text" v-bind:title='message3' v-model="input3"></input><br>
+  <input id="Input" type="text" v-bind:title='message4' v-model="input4"></input><br>
+<input id="Input"type="text" v-bind:title='message5' v-model="input5"></input><br></center>
+    <button id="B1"><router-link to="/30" id="b">{{button1}}</router-link></button>
+<button id="B1"><router-link to="/" id="b">{{button2}}</router-link></button>
+ </div>
+  </script>
+   
+<script type="text/x-template" id="login">
+  <div>
+    <h1><center>Login</center></h1>
+    <center><input id="Input" type="text" v-bind:title='message3' v-model="input3"></input><br>
+    <input id="Input" type="text" v-bind:title='message4' v-model="input4"></input><br></center>
+<button id="B1"><router-link to="/" id="b">{{button3}}</router-link></button>
+  </div>
+</script> 
+  
+<script type="text/x-template" id="home">
+<div>
+<h1><center>Lets Learn Turkish:)</center></h1>
+<p><center>Choose a Level Below to Get Started</center></p>
+<button id="b1"><center><router-link to="/1" id="b">A1</router-link></center></button>
+  <button id="b1"><router-link to="/2" id="b">A2</router-link></button>
+  <button id="b1" ><router-link to="/3" id="b">B1</router-link></button> 
+    <button id="b1"><router-link to="/4" id="b">B2</router-link></button> 
+  </div>
+ </script>
+  
+<script type="text/x-template" id="A1">
+<div>
+<h1><center>A1<center></h1>
+  <button id="b1"><center><router-link to="/5" id="b">Vocabulary</router-link></center></button>
+<button id="b1"><router-link to="/6" id="b">Grammar</router-link></button>
+</div>
+</script>
+  
+<script type="text/x-template" id="A2">
+<div>
+<h1><center>A2<center></h1>
+<button id="b1"><center><router-link to="/7" id="b">Vocabulary</router-link></center></button>
+<button id="b1"><router-link to="/8" id="b">Grammar</router-link></button>
+  </div>
+</script>
+  
+<script type="text/x-template" id="B1">
+<div>
+<h1><center>B1<center></h1>
+<button id="b1"><center><router-link to="/9" id="b">Vocabulary</router-link></center></button>
+<button id="b1"><router-link to="/10" id="b">Grammar</router-link></button>
+</div>
+ </script>
+  
+<script type="text/x-template" id="B2">
+<div>
+<h1><center>B2<center></h1>
+<button id="b1"><center><router-link to="/11" id="b">Vocabulary</router-link></center></button>
+<button id="b1"><router-link to="/12" id="b">Grammar</router-link></button>
+  </div>
+</script>
+
+<!--A1 quiz home pages -->
+<script type="text/x-template" id="vocabulary1">
+<div> 
+<h1><center>Vocabulary<center></h1>
+ <button id="b1"><router-link to="/13" id="b">start</router-link></button>
+  <button id="b1"><router-link to="/21" id="b">answers</router-link></button>
+   <button id="b1"><router-link to="/13" id="b">redo</router-link></button>
+   <button id="b1"><router-link to="/1" id="b">quit</router-link></button>
+  </div>
+</script>
+
+<script type="text/x-template" id="grammar1">
+<div>
+<h1><center>Grammar<center></h1>
+<button id="b1"><router-link to="/17" id="b">start</router-link></button>
+  <button id="b1"><router-link to="/22" id="b">answers</router-link></button>
+   <button id="b1"><router-link to="/17" id="b">redo</router-link></button>
+   <button id="b1"><router-link to="/1" id="b">quit</router-link></button>
+</div>
+</script>
+
+<!--A2 quiz home pages-->
+<script type="text/x-template" id="vocabulary2">
+<div> 
+<h1><center>Vocabulary<center></h1>
+ <button id="b1"><router-link to="/14" id="b">start</router-link></button>
+  <button id="b1"><router-link to="/23" id="b">answers</router-link></button>
+   <button id="b1"><router-link to="/14" id="b">redo</router-link></button>
+   <button id="b1"><router-link to="/2" id="b">quit</router-link></button>
+  </div>
+</script>
+
+<script type="text/x-template" id="grammar2">
+<div>
+<h1><center>Grammar<center></h1>
+<button id="b1"><router-link to="/18" id="b">start</router-link></button>
+  <button id="b1"><router-link to="/24" id="b">answers</router-link></button>
+   <button id="b1"><router-link to="/18" id="b">redo</router-link></button>
+   <button id="b1"><router-link to="/2" id="b">quit</router-link></button>
+</div>
+</script>
+
+<!--B1 quiz home pages-->
+<script type="text/x-template" id="vocabulary3">
+<div> 
+<h1><center>Vocabulary<center></h1>
+ <button id="b1"><router-link to="/15" id="b">start</router-link></button>
+  <button id="b1"><router-link to="/25" id="b">answers</router-link></button>
+   <button id="b1"><router-link to="/15" id="b">redo</router-link></button>
+   <button id="b1"><router-link to="/3" id="b">quit</router-link></button>
+  </div>
+</script>
+
+<script type="text/x-template" id="grammar3">
+<div>
+<h1><center>Grammar<center></h1>
+<button id="b1"><router-link to="/19" id="b">start</button>
+  <button id="b1"><router-link to="/26" id="b">answers</router-link></button>
+   <button id="b1"><router-link to="/19" id="b">redo</button>
+   <button id="b1"><router-link to="/3" id="b">quit</router-link></button>
+</div>
+</script>
+ <!--B2 quiz home pages-->
+<script type="text/x-template" id="vocabulary4">
+<div> 
+<h1><center>Vocabulary<center></h1>
+<button id="b1"><router-link to="/16" id="b">start</router-link></button>
+  <button id="b1"><router-link to="/27" id="b">answers</router-link></button>
+   <button id="b1"><router-link to="/16" id="b">redo</router-link></button>
+   <button id="b1"><router-link to="/4" id="b">quit</router-link></button>
+  </div>
+</script>
+
+<script type="text/x-template" id="grammar4">
+<div>
+<h1><center>Grammar<center></h1>
+<button id="b1"><router-link to="/20" id="b">start</button>
+  <button id="b1"><router-link to="/28" id="b">answers</router-link></button>
+   <button id="b1"><router-link to="/20" id="b">redo</button>
+   <button id="b1"><router-link to="/4" id="b">quit</router-link></button>
+</div>
+</script>
+
+<!--A1 quiz vocab page-->
+<script type="text/x-template" id="startredov1">
+<div>   
+<div id="app1">
+ <h1><center>A1 - Vocabulary Quiz</center></h1> 
+<!--question 1-->
+<div class="box">
+<h2>Question 1: {{Quizquestion1[0].question}}</h2>
+A: {{Quizquestion1[0].answerA}}<br>
+B: {{Quizquestion1[0].answerB}}<br>
+C: {{Quizquestion1[0].answerC}}<br>
+D: {{Quizquestion1[0].answerD}}<br>
+<p></p>
+<b>Select the correct letter: <input type="text" v-bind:title='message'v-model="Quizquestion1[0].selectedAnswer"> </input></b>
+ <p v-if="Quizquestion1[0].selectedAnswer!==Quizquestion1[0].userInput">Type in your answer!</p>
+<p v-else>Don't forget to click the submit button once you're done!</p>
+<button id="b2" v-on:click='ColorGreen'>submit answer</button>
+</div>
+<!--question 2-->
+<div class="box">
+<h2>Question 2: {{Quizquestion2[0].question}}</h2>
+A: {{Quizquestion2[0].answerA}}<br>
+B: {{Quizquestion2[0].answerB}}<br>
+C: {{Quizquestion2[0].answerC}}<br>
+D: {{Quizquestion2[0].answerD}}<br>
+<p></p>
+<b>Select the correct letter: <input type="text" v-bind:title='message'v-model="Quizquestion2[0].selectedAnswer"> </input></b>
+ <p v-if="Quizquestion2[0].selectedAnswer!==Quizquestion2[0].userInput">Type in your answer!</p>
+<p v-else>Don't forget to click the submit button once you're done!</p>
+<button id="b2" v-on:click='ColorGreen'>submit answer</button>
+</div>
+<!--question 3-->
+ <div class="box">
+<h2>Question 3: {{Quizquestion3[0].question}}</h2>
+A: {{Quizquestion3[0].answerA}}<br>
+B: {{Quizquestion3[0].answerB}}<br>
+C: {{Quizquestion3[0].answerC}}<br>
+D: {{Quizquestion3[0].answerD}}<br>
+<p></p>
+<b>Select the correct letter: <input type="text" v-bind:title='message'v-model="Quizquestion3[0].selectedAnswer"> </input></b>
+ <p v-if="Quizquestion3[0].selectedAnswer!==Quizquestion3[0].userInput">Type in your answer!</p>
+<p v-else>Don't forget to click the submit button once you're done!</p>
+<button id="b2" v-on:click='ColorGreen'>submit answer</button>
+</div>
+<!--question 4-->
+<div class="box">
+<h2>Question 4: {{Quizquestion4[0].question}}</h2>
+A: {{Quizquestion4[0].answerA}}<br>
+B: {{Quizquestion4[0].answerB}}<br>
+C: {{Quizquestion4[0].answerC}}<br>
+D: {{Quizquestion4[0].answerD}}<br>
+<p></p>
+<b>Select the correct letter: <input type="text" v-bind:title='message'v-model="Quizquestion4[0].selectedAnswer"> </input></b>
+ <p v-if="Quizquestion4[0].selectedAnswer!==Quizquestion4[0].userInput">Type in your answer!</p>
+<p v-else>Don't forget to click the submit button once you're done!</p>
+<button id="b2" v-on:click='ColorGreen'>submit answer</button>
+</div>
+<!--question 5-->
+<div class="box">
+<h2>Question 5: {{Q5}}</h2>  
+  <div class="b5" v-bind:class="{applyBrown1: statusBrown1}"><center><button v-on:click="changeBrown1"> class</button></div> 
+  <div class="b5" v-bind:class="{applyBrown2: statusBrown2}"><center><button v-on:click='changeBrown2'>table</button></div>
+  <div class="b5" v-bind:class="{applyBrown3: statusBrown3}"><center><button v-on:click='changeBrown3'>winter</button></div>
+    <div class="b5" v-bind:class="{applyBrown4: statusBrown4}"><center><button v-on:click='changeBrown4'>Wednesday</button></div>
+<button id="b2" v-on:click='ColorGreen'> submit answer</button>
+</div>
+<!--question 6-->
+ <div class="box">
+<h2>Question 6: {{Q6}}</h2>  
+  <div class="b5" v-bind:class="{applyBrown5: statusBrown5}"><center><button v-on:click="changeBrown5"> season</button></div> 
+  <div class="b5" v-bind:class="{applyBrown6: statusBrown6}"><center><button v-on:click='changeBrown6'>snowy</button></div>
+  <div class="b5" v-bind:class="{applyBrown7: statusBrown7}"><center><button v-on:click='changeBrown7'>window</button></div>
+    <div class="b5" v-bind:class="{applyBrown8: statusBrown8}"><center><button v-on:click='changeBrown8'>chair</button></div>
+<button id="b2" v-on:click='ColorGreen'> submit answer</button>
+</div>
+<!--question 7-->
+ <div class="box">
+<h2>Question 7: {{Q7}}</h2>  
+  <div class="b5" v-bind:class="{applyBrown9: statusBrown9}"><center><button v-on:click="changeBrown9"> scarf</button></div> 
+  <div class="b5" v-bind:class="{applyBrown10: statusBrown10}"><center><button v-on:click='changeBrown10'>plate</button></div>
+  <div class="b5" v-bind:class="{applyBrown11: statusBrown11}"><center><button v-on:click='changeBrown11'>seat</button></div>
+ <div class="b5" v-bind:class="{applyBrown12: statusBrown12}"><center><button v-on:click='changeBrown12'>fork</button></div>
+<button id="b2" v-on:click='ColorGreen'> submit answer</button>
+</div>
+<!--question 8-->
+<div class="box">
+ <h2>Question 8: {{Quizquestion8[0].question}}</h2>
+1: {{Quizquestion8[0].answer1}}<br>
+2: {{Quizquestion8[0].answer2}}<br>
+3: {{Quizquestion8[0].answer3}}<br>
+4: {{Quizquestion8[0].answer4}}<br>
+  <p><b>Number of correct answer: {{x}}</b></p>
+  <center><button class="b3" v-on:click="increasex()">Increase x</button>
+    <button class="b3" v-on:click="decreasex()">Decrease x</button></center>
+    <p>{{evaluatex}}</p>
+  <button id="b2" v-on:click='ColorGreen'> submit answer</button>
+ </div>
+<!--question 9-->
+ <div class="box">
+ <h2>Question 9: {{Quizquestion9[0].question}}</h2>
+1: {{Quizquestion9[0].answer1}}<br>
+2: {{Quizquestion9[0].answer2}}<br>
+3: {{Quizquestion9[0].answer3}}<br>
+4: {{Quizquestion9[0].answer4}}<br>
+  <p><b>Number of correct answer: {{y}}</b></p>
+  <center><button class="b3" v-on:click="increasey()">Increase y</button>
+    <button class="b3" v-on:click="decreasey()">Decrease y</button></center> 
+      <p>{{evaluatey}}</p>
+  <button id="b2" v-on:click='ColorGreen'> submit answer</button>
+ </div>
+<!--question 10-->
+<div class="box">
+ <h2>Question 10: {{Quizquestion10[0].question}}</h2>
+1: {{Quizquestion10[0].answer1}}<br>
+2: {{Quizquestion10[0].answer2}}<br>
+3: {{Quizquestion10[0].answer3}}<br>
+4: {{Quizquestion10[0].answer4}}<br>
+  <p><b>Number of correct answer: {{z}}</b></p>
+  <center><button class="b3" v-on:click="increasez()">Increase z</button>
+    <button class="b3" v-on:click="decreasez()">Decrease z</button></center> 
+      <p>{{evaluatez}}</p>
+  <button id="b2" v-on:click='ColorGreen'> submit answer</button>
+    </div>
+<!--final submit button-->
+    <center><button id="b4" v-on:click='ColorGreen'><b><router-link to="/5" id="b">{{submit}}</router-link></b></button></center>
+    <h3 id="p1"></h3>
+</div>
+</div>
+</script>
+
+<!--A2 quiz vocab page-->
+<script type="text/x-template" id="startredov2">
+<div>
+  <div id="app2">
+    <h1><center>A2 - Vocabulary Quiz</center></h1>
+ <!--question 1-->
+ <div class="box">
+<h2>Question 1: {{Quizquestion1[0].question}}</h2>
+A: {{Quizquestion1[0].answerA}}<br>
+B: {{Quizquestion1[0].answerB}}<br>
+C: {{Quizquestion1[0].answerC}}<br>
+D: {{Quizquestion1[0].answerD}}<br>
+<p></p>
+<b>Select the correct letter: <input type="text" v-bind:title='message'v-model="Quizquestion1[0].selectedAnswer"> </input></b>
+ <p v-if="Quizquestion1[0].selectedAnswer!==Quizquestion1[0].userInput">Type in your answer!</p>
+<p v-else>Don't forget to click the submit button once you're done!</p>
+<button id="b2" v-on:click='ColorGreen'>submit answer</button>
+</div>
+    
+<!--question 2-->
+<div class="box">
+<h2>Question 2: {{Quizquestion2[0].question}}</h2>
+A: {{Quizquestion2[0].answerA}}<br>
+B: {{Quizquestion2[0].answerB}}<br>
+C: {{Quizquestion2[0].answerC}}<br>
+D: {{Quizquestion2[0].answerD}}<br>
+<p></p>
+<b>Select the correct letter: <input type="text" v-bind:title='message'v-model="Quizquestion2[0].selectedAnswer"> </input></b>
+ <p v-if="Quizquestion2[0].selectedAnswer!==Quizquestion2[0].userInput">Type in your answer!</p>
+<p v-else>Don't forget to click the submit button once you're done!</p>
+<button id="b2" v-on:click='ColorGreen'>submit answer</button>
+</div>
+ 
+<!--question 3-->
+  <div class="box">
+<h2>Question 3: {{Quizquestion3[0].question}}</h2>
+A: {{Quizquestion3[0].answerA}}<br>
+B: {{Quizquestion3[0].answerB}}<br>
+C: {{Quizquestion3[0].answerC}}<br>
+D: {{Quizquestion3[0].answerD}}<br>
+<p></p>
+<b>Select the correct letter: <input type="text" v-bind:title='message'v-model="Quizquestion3[0].selectedAnswer"> </input></b>
+ <p v-if="Quizquestion3[0].selectedAnswer!==Quizquestion3[0].userInput">Type in your answer!</p>
+<p v-else>Don't forget to click the submit button once you're done!</p>
+<button id="b2" v-on:click='ColorGreen'>submit answer</button>
+</div>
+
+<!--question 4-->
+  <div class="box">
+<h2>Question 4: {{Quizquestion4[0].question}}</h2>
+A: {{Quizquestion4[0].answerA}}<br>
+B: {{Quizquestion4[0].answerB}}<br>
+C: {{Quizquestion4[0].answerC}}<br>
+D: {{Quizquestion4[0].answerD}}<br>
+<p></p>
+<b>Select the correct letter: <input type="text" v-bind:title='message'v-model="Quizquestion4[0].selectedAnswer"> </input></b>
+ <p v-if="Quizquestion4[0].selectedAnswer!==Quizquestion4[0].userInput">Type in your answer!</p>
+<p v-else>Don't forget to click the submit button once you're done!</p>
+<button id="b2" v-on:click='ColorGreen'>submit answer</button>
+</div>
+
+<!--question 5-->
+<div class="box">
+<h2>Question 5: {{Q5}}</h2>  
+  <div class="b5" v-bind:class="{applyBrown1: statusBrown1}"><center><button v-on:click="changeBrown1">infront of</button></div> 
+  <div class="b5" v-bind:class="{applyBrown2: statusBrown2}"><center><button v-on:click='changeBrown2'>next to</button></div>
+  <div class="b5" v-bind:class="{applyBrown3: statusBrown3}"><center><button v-on:click='changeBrown3'>rope</button></div>
+    <div class="b5" v-bind:class="{applyBrown4: statusBrown4}"><center><button v-on:click='changeBrown4'>wool</button></div>
+<button id="b2" v-on:click='ColorGreen'> submit answer</button>
+</div>
+
+ <!--question 6-->
+ <div class="box">
+<h2>Question 6: {{Q6}}</h2>  
+  <div class="b5" v-bind:class="{applyBrown5: statusBrown5}"><center><button v-on:click="changeBrown5">maternal uncle</button></div> 
+  <div class="b5" v-bind:class="{applyBrown6: statusBrown6}"><center><button v-on:click='changeBrown6'>cousin</button></div>
+  <div class="b5" v-bind:class="{applyBrown7: statusBrown7}"><center><button v-on:click='changeBrown7'>paternal aunt</button></div>
+    <div class="b5" v-bind:class="{applyBrown8: statusBrown8}"><center><button v-on:click='changeBrown8'>sister-in-law</button></div>
+<button id="b2" v-on:click='ColorGreen'> submit answer</button>
+</div>
+    
+<!--question 7-->
+ <div class="box">
+<h2>Question 7: {{Q7}}</h2>  
+  <div class="b5" v-bind:class="{applyBrown9: statusBrown9}"><center><button v-on:click="changeBrown9">spider</button></div> 
+  <div class="b5" v-bind:class="{applyBrown10: statusBrown10}"><center><button v-on:click='changeBrown10'>ant</button></div>
+  <div class="b5" v-bind:class="{applyBrown11: statusBrown11}"><center><button v-on:click='changeBrown11'>snake</button></div>
+ <div class="b5" v-bind:class="{applyBrown12: statusBrown12}"><center><button v-on:click='changeBrown12'>fox</button></div>
+<button id="b2" v-on:click='ColorGreen'> submit answer</button>
+</div>
+    
+<!--question 8-->
+ <div class="box">
+ <h2>Question 8: {{Quizquestion8[0].question}}</h2>
+1: {{Quizquestion8[0].answer1}}<br>
+2: {{Quizquestion8[0].answer2}}<br>
+3: {{Quizquestion8[0].answer3}}<br>
+4: {{Quizquestion8[0].answer4}}<br>
+  <p><b>Number of correct answer: {{x}}</b></p>
+  <center><button class="b3" v-on:click="increasex()">Increase x</button>
+    <button class="b3" v-on:click="decreasex()">Decrease x</button></center>
+    <p>{{evaluatex}}</p>
+  <button id="b2" v-on:click='ColorGreen'> submit answer</button>
+ </div>
+    
+<!--question 9-->
+ <div class="box">
+ <h2>Question 9: {{Quizquestion9[0].question}}</h2>
+1: {{Quizquestion9[0].answer1}}<br>
+2: {{Quizquestion9[0].answer2}}<br>
+3: {{Quizquestion9[0].answer3}}<br>
+4: {{Quizquestion9[0].answer4}}<br>
+  <p><b>Number of correct answer: {{y}}</b></p>
+  <center><button class="b3" v-on:click="increasey()">Increase y</button>
+    <button class="b3" v-on:click="decreasey()">Decrease y</button></center> 
+      <p>{{evaluatey}}</p>
+  <button id="b2" v-on:click='ColorGreen'> submit answer</button>
+ </div>
+    
+<!--question 10-->
+   <div class="box">
+ <h2>Question 10: {{Quizquestion10[0].question}}</h2>
+1: {{Quizquestion10[0].answer1}}<br>
+2: {{Quizquestion10[0].answer2}}<br>
+3: {{Quizquestion10[0].answer3}}<br>
+4: {{Quizquestion10[0].answer4}}<br>
+  <p><b>Number of correct answer: {{z}}</b></p>
+  <center><button class="b3" v-on:click="increasez()">Increase z</button>
+    <button class="b3" v-on:click="decreasez()">Decrease z</button></center> 
+      <p>{{evaluatez}}</p>
+  <button id="b2" v-on:click='ColorGreen'> submit answer</button>
+    </div>
+    
+<!--final submit button-->
+    <center><button id="b4" v-on:click='ColorGreen'><b><router-link to="/7" id="b">{{submit}}</router-link></b></button></center>   
+    
+ </div>
+</div>
+</script>
+
+<!--B1 quiz vocab page-->
+<script type="text/x-template" id="startredov3">
+<div>
+  <div id="app3">
+    <h1><center>B1 - Vocabulary Quiz</center></h1>
+ <!--question 1-->
+ <div class="box">
+<h2>Question 1: {{Quizquestion1[0].question}}</h2>
+A: {{Quizquestion1[0].answerA}}<br>
+B: {{Quizquestion1[0].answerB}}<br>
+C: {{Quizquestion1[0].answerC}}<br>
+D: {{Quizquestion1[0].answerD}}<br>
+<p></p>
+<b>Select the correct letter: <input type="text" v-bind:title='message'v-model="Quizquestion1[0].selectedAnswer"> </input></b>
+ <p v-if="Quizquestion1[0].selectedAnswer!==Quizquestion1[0].userInput">Type in your answer!</p>
+<p v-else>Don't forget to click the submit button once you're done!</p>
+<button id="b2" v-on:click='ColorGreen'>submit answer</button>
+</div>
+    
+<!--question 2-->
+<div class="box">
+<h2>Question 2: {{Quizquestion2[0].question}}</h2>
+A: {{Quizquestion2[0].answerA}}<br>
+B: {{Quizquestion2[0].answerB}}<br>
+C: {{Quizquestion2[0].answerC}}<br>
+D: {{Quizquestion2[0].answerD}}<br>
+<p></p>
+<b>Select the correct letter: <input type="text" v-bind:title='message'v-model="Quizquestion2[0].selectedAnswer"> </input></b>
+ <p v-if="Quizquestion2[0].selectedAnswer!==Quizquestion2[0].userInput">Type in your answer!</p>
+<p v-else>Don't forget to click the submit button once you're done!</p>
+<button id="b2" v-on:click='ColorGreen'>submit answer</button>
+</div>
+ 
+<!--question 3-->
+  <div class="box">
+<h2>Question 3: {{Quizquestion3[0].question}}</h2>
+A: {{Quizquestion3[0].answerA}}<br>
+B: {{Quizquestion3[0].answerB}}<br>
+C: {{Quizquestion3[0].answerC}}<br>
+D: {{Quizquestion3[0].answerD}}<br>
+<p></p>
+<b>Select the correct letter: <input type="text" v-bind:title='message'v-model="Quizquestion3[0].selectedAnswer"> </input></b>
+ <p v-if="Quizquestion3[0].selectedAnswer!==Quizquestion3[0].userInput">Type in your answer!</p>
+<p v-else>Don't forget to click the submit button once you're done!</p>
+<button id="b2" v-on:click='ColorGreen'>submit answer</button>
+</div>
+
+<!--question 4-->
+  <div class="box">
+<h2>Question 4: {{Quizquestion4[0].question}}</h2>
+A: {{Quizquestion4[0].answerA}}<br>
+B: {{Quizquestion4[0].answerB}}<br>
+C: {{Quizquestion4[0].answerC}}<br>
+D: {{Quizquestion4[0].answerD}}<br>
+<p></p>
+<b>Select the correct letter: <input type="text" v-bind:title='message'v-model="Quizquestion4[0].selectedAnswer"> </input></b>
+ <p v-if="Quizquestion4[0].selectedAnswer!==Quizquestion4[0].userInput">Type in your answer!</p>
+<p v-else>Don't forget to click the submit button once you're done!</p>
+<button id="b2" v-on:click='ColorGreen'>submit answer</button>
+</div>
+
+<!--question 5-->
+<div class="box">
+<h2>Question 5: {{Q5}}</h2>  
+  <div class="b5" v-bind:class="{applyBrown1: statusBrown1}"><center><button v-on:click="changeBrown1">wax</button></div> 
+  <div class="b5" v-bind:class="{applyBrown2: statusBrown2}"><center><button v-on:click='changeBrown2'>candle</button></div>
+  <div class="b5" v-bind:class="{applyBrown3: statusBrown3}"><center><button v-on:click='changeBrown3'>cotton</button></div>
+    <div class="b5" v-bind:class="{applyBrown4: statusBrown4}"><center><button v-on:click='changeBrown4'>salt</button></div>
+<button id="b2" v-on:click='ColorGreen'> submit answer</button>
+</div>
+
+ <!--question 6-->
+ <div class="box">
+<h2>Question 6: {{Q6}}</h2>  
+  <div class="b5" v-bind:class="{applyBrown5: statusBrown5}"><center><button v-on:click="changeBrown5"> fence</button></div> 
+  <div class="b5" v-bind:class="{applyBrown6: statusBrown6}"><center><button v-on:click='changeBrown6'>grass</button></div>
+  <div class="b5" v-bind:class="{applyBrown7: statusBrown7}"><center><button v-on:click='changeBrown7'>bar</button></div>
+    <div class="b5" v-bind:class="{applyBrown8: statusBrown8}"><center><button v-on:click='changeBrown8'>wood</button></div>
+<button id="b2" v-on:click='ColorGreen'> submit answer</button>
+</div>
+    
+<!--question 7-->
+ <div class="box">
+<h2>Question 7: {{Q7}}</h2>  
+  <div class="b5" v-bind:class="{applyBrown9: statusBrown9}"><center><button v-on:click="changeBrown9">buffalo</button></div> 
+  <div class="b5" v-bind:class="{applyBrown10: statusBrown10}"><center><button v-on:click='changeBrown10'>storm</button></div>
+  <div class="b5" v-bind:class="{applyBrown11: statusBrown11}"><center><button v-on:click='changeBrown11'>fire</button></div>
+ <div class="b5" v-bind:class="{applyBrown12: statusBrown12}"><center><button v-on:click='changeBrown12'>smoke</button></div>
+<button id="b2" v-on:click='ColorGreen'> submit answer</button>
+</div>
+    
+<!--question 8-->
+ <div class="box">
+ <h2>Question 8: {{Quizquestion8[0].question}}</h2>
+1: {{Quizquestion8[0].answer1}}<br>
+2: {{Quizquestion8[0].answer2}}<br>
+3: {{Quizquestion8[0].answer3}}<br>
+4: {{Quizquestion8[0].answer4}}<br>
+  <p><b>Number of correct answer: {{x}}</b></p>
+  <center><button class="b3" v-on:click="increasex()">Increase x</button>
+    <button class="b3" v-on:click="decreasex()">Decrease x</button></center>
+    <p>{{evaluatex}}</p>
+  <button id="b2" v-on:click='ColorGreen'> submit answer</button>
+ </div>
+    
+<!--question 9-->
+ <div class="box">
+ <h2>Question 9: {{Quizquestion9[0].question}}</h2>
+1: {{Quizquestion9[0].answer1}}<br>
+2: {{Quizquestion9[0].answer2}}<br>
+3: {{Quizquestion9[0].answer3}}<br>
+4: {{Quizquestion9[0].answer4}}<br>
+  <p><b>Number of correct answer: {{y}}</b></p>
+  <center><button class="b3" v-on:click="increasey()">Increase y</button>
+    <button class="b3" v-on:click="decreasey()">Decrease y</button></center> 
+      <p>{{evaluatey}}</p>
+  <button id="b2" v-on:click='ColorGreen'> submit answer</button>
+ </div>
+    
+<!--question 10-->
+   <div class="box">
+ <h2>Question 10: {{Quizquestion10[0].question}}</h2>
+1: {{Quizquestion10[0].answer1}}<br>
+2: {{Quizquestion10[0].answer2}}<br>
+3: {{Quizquestion10[0].answer3}}<br>
+4: {{Quizquestion10[0].answer4}}<br>
+  <p><b>Number of correct answer: {{z}}</b></p>
+  <center><button class="b3" v-on:click="increasez()">Increase z</button>
+    <button class="b3" v-on:click="decreasez()">Decrease z</button></center> 
+      <p>{{evaluatez}}</p>
+  <button id="b2" v-on:click='ColorGreen'> submit answer</button>
+    </div>
+    
+<!--final submit button-->
+    <center><button id="b4" v-on:click='ColorGreen'><b><router-link to="/9" id="b">{{submit}}</router-link></b></button></center>  
+    
+ </div>
+</div>
+</script>
+
+<!--B2 quiz vocab page-->
+<script type="text/x-template" id="startredov4">
+<div>
+  <div id="app4">
+    <h1><center>B2 - Vocabulary Quiz</center></h1>
+ <!--question 1-->
+ <div class="box">
+<h2>Question 1: {{Quizquestion1[0].question}}</h2>
+A: {{Quizquestion1[0].answerA}}<br>
+B: {{Quizquestion1[0].answerB}}<br>
+C: {{Quizquestion1[0].answerC}}<br>
+D: {{Quizquestion1[0].answerD}}<br>
+<p></p>
+<b>Select the correct letter: <input type="text" v-bind:title='message'v-model="Quizquestion1[0].selectedAnswer"> </input></b>
+ <p v-if="Quizquestion1[0].selectedAnswer!==Quizquestion1[0].userInput">Type in your answer!</p>
+<p v-else>Don't forget to click the submit button once you're done!</p>
+<button id="b2" v-on:click='ColorGreen'>submit answer</button>
+</div>
+    
+<!--question 2-->
+<div class="box">
+<h2>Question 2: {{Quizquestion2[0].question}}</h2>
+A: {{Quizquestion2[0].answerA}}<br>
+B: {{Quizquestion2[0].answerB}}<br>
+C: {{Quizquestion2[0].answerC}}<br>
+D: {{Quizquestion2[0].answerD}}<br>
+<p></p>
+<b>Select the correct letter: <input type="text" v-bind:title='message'v-model="Quizquestion2[0].selectedAnswer"> </input></b>
+ <p v-if="Quizquestion2[0].selectedAnswer!==Quizquestion2[0].userInput">Type in your answer!</p>
+<p v-else>Don't forget to click the submit button once you're done!</p>
+<button id="b2" v-on:click='ColorGreen'>submit answer</button>
+</div>
+ 
+<!--question 3-->
+  <div class="box">
+<h2>Question 3: {{Quizquestion3[0].question}}</h2>
+A: {{Quizquestion3[0].answerA}}<br>
+B: {{Quizquestion3[0].answerB}}<br>
+C: {{Quizquestion3[0].answerC}}<br>
+D: {{Quizquestion3[0].answerD}}<br>
+<p></p>
+<b>Select the correct letter: <input type="text" v-bind:title='message'v-model="Quizquestion3[0].selectedAnswer"> </input></b>
+ <p v-if="Quizquestion3[0].selectedAnswer!==Quizquestion3[0].userInput">Type in your answer!</p>
+<p v-else>Don't forget to click the submit button once you're done!</p>
+<button id="b2" v-on:click='ColorGreen'>submit answer</button>
+</div>
+
+<!--question 4-->
+  <div class="box">
+<h2>Question 4: {{Quizquestion4[0].question}}</h2>
+A: {{Quizquestion4[0].answerA}}<br>
+B: {{Quizquestion4[0].answerB}}<br>
+C: {{Quizquestion4[0].answerC}}<br>
+D: {{Quizquestion4[0].answerD}}<br>
+<p></p>
+<b>Select the correct letter: <input type="text" v-bind:title='message'v-model="Quizquestion4[0].selectedAnswer"> </input></b>
+ <p v-if="Quizquestion4[0].selectedAnswer!==Quizquestion4[0].userInput">Type in your answer!</p>
+<p v-else>Don't forget to click the submit button once you're done!</p>
+<button id="b2" v-on:click='ColorGreen'>submit answer</button>
+</div>
+
+<!--question 5-->
+<div class="box">
+<h2>Question 5: {{Q5}}</h2>  
+  <div class="b5" v-bind:class="{applyBrown1: statusBrown1}"><center><button v-on:click="changeBrown1">insurance</button></div> 
+  <div class="b5" v-bind:class="{applyBrown2: statusBrown2}"><center><button v-on:click='changeBrown2'>file</button></div>
+  <div class="b5" v-bind:class="{applyBrown3: statusBrown3}"><center><button v-on:click='changeBrown3'>station</button></div>
+    <div class="b5" v-bind:class="{applyBrown4: statusBrown4}"><center><button v-on:click='changeBrown4'>office</button></div>
+<button id="b2" v-on:click='ColorGreen'> submit answer</button>
+</div>
+
+ <!--question 6-->
+ <div class="box">
+<h2>Question 6: {{Q6}}</h2>  
+  <div class="b5" v-bind:class="{applyBrown5: statusBrown5}"><center><button v-on:click="changeBrown5">finger</button></div> 
+  <div class="b5" v-bind:class="{applyBrown6: statusBrown6}"><center><button v-on:click='changeBrown6'>right handed</button></div>
+  <div class="b5" v-bind:class="{applyBrown7: statusBrown7}"><center><button v-on:click='changeBrown7'>right</button></div>
+    <div class="b5" v-bind:class="{applyBrown8: statusBrown8}"><center><button v-on:click='changeBrown8'>stupid</button></div>
+<button id="b2" v-on:click='ColorGreen'> submit answer</button>
+</div>
+    
+<!--question 7-->
+ <div class="box">
+<h2>Question 7: {{Q7}}</h2>  
+  <div class="b5" v-bind:class="{applyBrown9: statusBrown9}"><center><button v-on:click="changeBrown9">exam</button></div> 
+  <div class="b5" v-bind:class="{applyBrown10: statusBrown10}"><center><button v-on:click='changeBrown10'>judge</button></div>
+  <div class="b5" v-bind:class="{applyBrown11: statusBrown11}"><center><button v-on:click='changeBrown11'>competition</button></div>
+ <div class="b5" v-bind:class="{applyBrown12: statusBrown12}"><center><button v-on:click='changeBrown12'>swimmer</button></div>
+<button id="b2" v-on:click='ColorGreen'> submit answer</button>
+</div>
+    
+<!--question 8-->
+ <div class="box">
+ <h2>Question 8: {{Quizquestion8[0].question}}</h2>
+1: {{Quizquestion8[0].answer1}}<br>
+2: {{Quizquestion8[0].answer2}}<br>
+3: {{Quizquestion8[0].answer3}}<br>
+4: {{Quizquestion8[0].answer4}}<br>
+  <p><b>Number of correct answer: {{x}}</b></p>
+  <center><button class="b3" v-on:click="increasex()">Increase x</button>
+    <button class="b3" v-on:click="decreasex()">Decrease x</button></center>
+    <p>{{evaluatex}}</p>
+  <button id="b2" v-on:click='ColorGreen'> submit answer</button>
+ </div>
+    
+<!--question 9-->
+ <div class="box">
+ <h2>Question 9: {{Quizquestion9[0].question}}</h2>
+1: {{Quizquestion9[0].answer1}}<br>
+2: {{Quizquestion9[0].answer2}}<br>
+3: {{Quizquestion9[0].answer3}}<br>
+4: {{Quizquestion9[0].answer4}}<br>
+  <p><b>Number of correct answer: {{y}}</b></p>
+  <center><button class="b3" v-on:click="increasey()">Increase y</button>
+    <button class="b3" v-on:click="decreasey()">Decrease y</button></center> 
+      <p>{{evaluatey}}</p>
+  <button id="b2" v-on:click='ColorGreen'> submit answer</button>
+ </div>
+    
+<!--question 10-->
+   <div class="box">
+ <h2>Question 10: {{Quizquestion10[0].question}}</h2>
+1: {{Quizquestion10[0].answer1}}<br>
+2: {{Quizquestion10[0].answer2}}<br>
+3: {{Quizquestion10[0].answer3}}<br>
+4: {{Quizquestion10[0].answer4}}<br>
+  <p><b>Number of correct answer: {{z}}</b></p>
+  <center><button class="b3" v-on:click="increasez()">Increase z</button>
+    <button class="b3" v-on:click="decreasez()">Decrease z</button></center> 
+      <p>{{evaluatez}}</p>
+  <button id="b2" v-on:click='ColorGreen'> submit answer</button>
+    </div>
+    
+<!--final submit button-->
+    <center><button id="b4" v-on:click='ColorGreen'><b><router-link to="/11" id="b">{{submit}}</router-link></b></button></center>   
+    
+ </div>
+</div>
+</script>
+
+<!--A1 quiz grammar page-->
+<script type="text/x-template" id="startredog1">
+<div>
+  <div id="app5">
+    <h1><center>A1 - Grammar Quiz</center></h1>
+   <!--question 1-->
+    <div class="box">
+ <h2>Question 1: {{Quizquestion1[0].question}}</h2>
+A: {{Quizquestion1[0].answerA}}<br>
+B: {{Quizquestion1[0].answerB}}<br>
+C: {{Quizquestion1[0].answerC}}<br>
+<p></p>
+<b>Select the correct letter: <input type="text" v-bind:title='message'v-model="Quizquestion1[0].selectedAnswer"> </input></b>
+ <p v-if="Quizquestion1[0].selectedAnswer!==Quizquestion1[0].userInput">Type in your answer!</p>
+<p v-else>Don't forget to click the submit button once you're done!</p>
+      <button id="b" v-on:click='ColorGreen'>submit answer</button>
+    </div>
+  
+   <!--question 2-->
+    <div class="box">
+      <h2>Question 2: {{Quizquestion1[0].question}}</h2>
+A: {{Quizquestion2[0].answerA}}<br>
+B: {{Quizquestion2[0].answerB}}<br>
+C: {{Quizquestion2[0].answerC}}<br>
+<p></p>
+<b>Select the correct letter: <input type="text" v-bind:title='message'v-model="Quizquestion1[0].selectedAnswer"> </input></b>
+ <p v-if="Quizquestion1[0].selectedAnswer!==Quizquestion1[0].userInput">Type in your answer!</p>
+<p v-else>Don't forget to click the submit button once you're done!</p>
+    <button id="b" v-on:click='ColorGreen'>submit answer</button>  
+    </div>
+    
+   <!--question 3-->
+    <div class="box">
+ <h2>Question 3: {{Quizquestion1[0].question}}</h2>
+A: {{Quizquestion3[0].answerA}}<br>
+B: {{Quizquestion3[0].answerB}}<br>
+C: {{Quizquestion3[0].answerC}}<br>
+<p></p>
+<b>Select the correct letter: <input type="text" v-bind:title='message'v-model="Quizquestion1[0].selectedAnswer"> </input></b>
+ <p v-if="Quizquestion1[0].selectedAnswer!==Quizquestion1[0].userInput">Type in your answer!</p>
+<p v-else>Don't forget to click the submit button once you're done!</p>
+      <button id="b" v-on:click='ColorGreen'>submit answer</button>
+    </div>
+    
+   <!--question 4-->
+    <div class="box">
+      <h2>Question 4: {{Q1}}</h2>  
+  <div class="b2" v-bind:class="{applyBrown1: statusBrown1}"><button v-on:click="changeBrown1">1</button></div>
+   <p id="b5">Benim babamının arkadaşın adı Ali.</p>
+      
+  <div class="b2" v-bind:class="{applyBrown2: statusBrown2}"><button v-on:click='changeBrown2'>2</button></div>
+      <p id="b5">Seninin kızının okulunun adı ne?</p>
+      
+  <div class="b2" v-bind:class="{applyBrown3: statusBrown3}"><button v-on:click='changeBrown3'>3</button></div>
+      <p id="b5">Ankara üniversitesinin öğrencilerinin kitapları.</p>
+      
+    <div class="b2" v-bind:class="{applyBrown4: statusBrown4}"><button v-on:click='changeBrown4'>4</button></div>
+      <p id="b5">Sınıfın penceresinin perdesinin rengisi.</p>
+      <p></p>
+     <button id="b" v-on:click='ColorGreen'>submit answer</button> 
+    </div>
+    
+   <!--question 5-->
+    <div class="box">
+      <h2>Question 5: {{Q1}}</h2>  
+  <div class="b2" v-bind:class="{applyBrown5: statusBrown5}"><button v-on:click="changeBrown5">1</button></div>
+   <p id="b5">Ben çok yorgunum.</p>
+      
+  <div class="b2" v-bind:class="{applyBrown6: statusBrown6}"><button v-on:click='changeBrown6'>2</button></div>
+      <p id="b5">O fazla çalışkanım.</p>
+      
+  <div class="b2" v-bind:class="{applyBrown7: statusBrown7}"><button v-on:click='changeBrown7'>3</button></div>
+      <p id="b5">Biz yabancıyız değil.</p>
+      
+    <div class="b2" v-bind:class="{applyBrown8: statusBrown8}"><button v-on:click='changeBrown8'>4</button></div>
+      <p id="b5">Sen mutlu değilsiniz mi?</p>
+      <p></p>
+     <button id="b" v-on:click='ColorGreen'>submit answer</button> 
+    </div>
+    
+   <!--question 6-->
+    <div class="box">
+      <h2>Question 6: {{Q1}}</h2>  
+  <div class="b2" v-bind:class="{applyBrown9: statusBrown9}"><button v-on:click="changeBrown9">1</button></div>
+   <p id="b5">Ben Türkiyedeyken öğrenciyim.</p>
+      
+  <div class="b2" v-bind:class="{applyBrown10: statusBrown10}"><button v-on:click='changeBrown10'>2</button></div>
+      <p id="b5">Geçen hafta onlar çok hastalardı.</p>
+      
+  <div class="b2" v-bind:class="{applyBrown11: statusBrown11}"><button v-on:click='changeBrown11'>3</button></div>
+      <p id="b5">Dün hava güneşli.</p>
+      
+    <div class="b2" v-bind:class="{applyBrown12: statusBrown12}"><button v-on:click='changeBrown12'>4</button></div>
+      <p id="b5">Geçen yıl Ahmet daha şişmandın.</p>
+      <p></p>
+     <button id="b" v-on:click='ColorGreen'>submit answer</button> 
+    </div>
+    
+   <!--question 7-->
+    <div class="box">
+ <h2>Question 7: {{Quizquestion7[0].question}}</h2>
+1: {{Quizquestion7[0].answer1}}<br>
+2: {{Quizquestion7[0].answer2}}<br>
+  <p><b>Number of correct answer: {{x}}</b></p>
+  <center><button class="b3" v-on:click="increasex()">Increase x</button>
+    <button class="b3" v-on:click="decreasex()">Decrease x</button></center>
+    <p>{{evaluatex}}</p>
+  <button id="b" v-on:click='ColorGreen'> submit answer</button>
+ </div>
+    
+   <!--question 8-->
+    <div class="box">
+ <h2>Question 8: {{Quizquestion1[0].question}}</h2>
+1: {{Quizquestion8[0].answer1}}<br>
+2: {{Quizquestion8[0].answer2}}<br>
+3: {{Quizquestion8[0].answer3}}<br>
+4: {{Quizquestion8[0].answer4}}<br>
+  <p><b>Number of correct answer: {{y}}</b></p>
+  <center><button class="b3" v-on:click="increasey()">Increase y</button>
+    <button class="b3" v-on:click="decreasey()">Decrease y</button></center>
+    <p>{{evaluatey}}</p>
+  <button id="b" v-on:click='ColorGreen'> submit answer</button>
+ </div>
+   <!--question 9-->
+    <div class="box">
+ <h2>Question 9: {{Quizquestion1[0].question}}</h2>
+1: {{Quizquestion9[0].answer1}}<br>
+2: {{Quizquestion9[0].answer2}}<br>
+3: {{Quizquestion9[0].answer3}}<br>
+4: {{Quizquestion9[0].answer4}}<br>
+  <p><b>Number of correct answer: {{z}}</b></p>
+  <center><button class="b3" v-on:click="increasez()">Increase z</button>
+    <button class="b3" v-on:click="decreasez()">Decrease z</button></center> 
+      <p>{{evaluatez}}</p>
+  <button id="b" v-on:click='ColorGreen'> submit answer</button>
+ </div>
+    
+   <!--question 10-->
+    <div class="box">
+      <h2>Question 10: {{Q2}}</h2>
+A: {{Quizquestion10[0].answerA}}<br>
+      <input type="text" v-model="answer1"></input><br>
+B: {{Quizquestion10[0].answerB}}<br>
+  <input type="text" v-model="answer2"></input><br>
+C: {{Quizquestion10[0].answerC}}<br>
+<input type="text" v-model="answer3"></input><br>
+<p></p>
+<center><button class="b3" v-on:click='total()'>Click for total number of mistakes found</button><br>
+<p></p>
+The total number of mistakes you found are: {{answer1}} + {{answer2}} + {{answer3}} = {{totalnumber}}<br></center>
+ <p></p>    
+ <button id="b" v-on:click='ColorGreen'>submit answer</button>
+    </div>
+    <!--final submit button-->
+<center><button id="b4" v-on:click='ColorGreen'><b><router-link to="/6" id="b">{{submit}}</router-link></b></button></center> 
+  </div>
+</div>
+</script>
+
+<!--A2 quiz grammar page-->
+<script type="text/x-template" id="startredog2">
+<div>
+  <div id="app6">
+    <h1><center>A2 - Grammar Quiz</center></h1>
+   <!--question 1-->
+    <div class="box">
+ <h2>Question 1: {{Quizquestion1[0].question}}</h2>
+A: {{Quizquestion1[0].answerA}}<br>
+B: {{Quizquestion1[0].answerB}}<br>
+C: {{Quizquestion1[0].answerC}}<br>
+<p></p>
+<b>Select the correct letter: <input type="text" v-bind:title='message'v-model="Quizquestion1[0].selectedAnswer"> </input></b>
+ <p v-if="Quizquestion1[0].selectedAnswer!==Quizquestion1[0].userInput">Type in your answer!</p>
+<p v-else>Don't forget to click the submit button once you're done!</p>
+      <button id="b2" v-on:click='ColorGreen'>submit answer</button>
+    </div>
+  
+   <!--question 2-->
+    <div class="box">
+      <h2>Question 2: {{Quizquestion1[0].question}}</h2>
+A: {{Quizquestion2[0].answerA}}<br>
+B: {{Quizquestion2[0].answerB}}<br>
+C: {{Quizquestion2[0].answerC}}<br>
+<p></p>
+<b>Select the correct letter: <input type="text" v-bind:title='message'v-model="Quizquestion1[0].selectedAnswer"> </input></b>
+ <p v-if="Quizquestion1[0].selectedAnswer!==Quizquestion1[0].userInput">Type in your answer!</p>
+<p v-else>Don't forget to click the submit button once you're done!</p>
+    <button id="b2" v-on:click='ColorGreen'>submit answer</button>  
+    </div>
+    
+   <!--question 3-->
+    <div class="box">
+ <h2>Question 3: {{Quizquestion1[0].question}}</h2>
+A: {{Quizquestion3[0].answerA}}<br>
+B: {{Quizquestion3[0].answerB}}<br>
+C: {{Quizquestion3[0].answerC}}<br>
+<p></p>
+<b>Select the correct letter: <input type="text" v-bind:title='message'v-model="Quizquestion1[0].selectedAnswer"> </input></b>
+ <p v-if="Quizquestion1[0].selectedAnswer!==Quizquestion1[0].userInput">Type in your answer!</p>
+<p v-else>Don't forget to click the submit button once you're done!</p>
+      <button id="b2" v-on:click='ColorGreen'>submit answer</button>
+    </div>
+    
+   <!--question 4-->
+    <div class="box">
+      <h2>Question 4: {{Q1}}</h2>  
+  <div class="b6" v-bind:class="{applyBrown1: statusBrown1}"><button v-on:click="changeBrown1">1</button></div>
+   <p id="b5">Dün okula gidecekmedim.</p>
+      
+  <div class="b6" v-bind:class="{applyBrown2: statusBrown2}"><button v-on:click='changeBrown2'>2</button></div>
+      <p id="b5">Sen bu sınavı girecektin mi.</p>
+      
+  <div class="b6" v-bind:class="{applyBrown3: statusBrown3}"><button v-on:click='changeBrown3'>3</button></div>
+      <p id="b5">Parka gidecektik ama hava çok kötü oldu.</p>
+      
+    <div class="b6" v-bind:class="{applyBrown4: statusBrown4}"><button v-on:click='changeBrown4'>4</button></div>
+      <p id="b5">Hanı artık sigara içecektin.</p>
+      <p></p>
+     <button id="b2" v-on:click='ColorGreen'>submit answer</button> 
+    </div>
+    
+   <!--question 5-->
+    <div class="box">
+      <h2>Question 5: {{Q1}}</h2>  
+  <div class="b6" v-bind:class="{applyBrown5: statusBrown5}"><button v-on:click="changeBrown5">1</button></div>
+   <p id="b5">Ben üniversiteye gitmemisi için Türkçe öğreniyorum.</p>
+      
+  <div class="b6" v-bind:class="{applyBrown6: statusBrown6}"><button v-on:click='changeBrown6'>2</button></div>
+      <p id="b5">Ablam uyumamak için kahve içiyor.</p>
+      
+  <div class="b6" v-bind:class="{applyBrown7: statusBrown7}"><button v-on:click='changeBrown7'>3</button></div>
+      <p id="b5">Bizim mutlu olmak için çok çalışacağım.</p>
+      
+    <div class="b6" v-bind:class="{applyBrown8: statusBrown8}"><button v-on:click='changeBrown8'>4</button></div>
+      <p id="b5">Ben okula gitmekme için yalan söylüyorum.</p>
+      <p></p>
+     <button id="b2" v-on:click='ColorGreen'>submit answer</button> 
+    </div>
+    
+   <!--question 6-->
+    <div class="box">
+      <h2>Question 6: {{Q1}}</h2>  
+  <div class="b6" v-bind:class="{applyBrown9: statusBrown9}"><button v-on:click="changeBrown9">1</button></div>
+   <p id="b5">Bebek uyumak üzere sessiz olun
+Bebek uyumak üzere sessiz olun.</p>
+      
+  <div class="b6" v-bind:class="{applyBrown10: statusBrown10}"><button v-on:click='changeBrown10'>2</button></div>
+      <p id="b5">Ders bitmesi üzere.</p>
+      
+  <div class="b6" v-bind:class="{applyBrown11: statusBrown11}"><button v-on:click='changeBrown11'>3</button></div>
+      <p id="b5">Biz geri dönmemek üzere gittin.</p>
+      
+    <div class="b6" v-bind:class="{applyBrown12: statusBrown12}"><button v-on:click='changeBrown12'>4</button></div>
+      <p id="b5">Siz sınavı bitirmek üzere.</p>
+      <p></p>
+     <button id="b2" v-on:click='ColorGreen'>submit answer</button> 
+    </div>
+    
+   <!--question 7-->
+    <div class="box">
+ <h2>Question 7: {{Quizquestion1[0].question}}</h2>
+1: {{Quizquestion7[0].answer1}}<br>
+2: {{Quizquestion7[0].answer2}}<br>
+3: {{Quizquestion7[0].answer3}}<br>
+4: {{Quizquestion7[0].answer4}}<br>
+  <p><b>Number of correct answer: {{x}}</b></p>
+  <center><button class="b3" v-on:click="increasex()">Increase x</button>
+    <button class="b3" v-on:click="decreasex()">Decrease x</button></center>
+    <p>{{evaluatex}}</p>
+  <button id="b2" v-on:click='ColorGreen'> submit answer</button>
+ </div>
+    
+   <!--question 8-->
+    <div class="box">
+ <h2>Question 8: {{Quizquestion1[0].question}}</h2>
+1: {{Quizquestion8[0].answer1}}<br>
+2: {{Quizquestion8[0].answer2}}<br>
+3: {{Quizquestion8[0].answer3}}<br>
+4: {{Quizquestion8[0].answer4}}<br>
+  <p><b>Number of correct answer: {{y}}</b></p>
+  <center><button class="b3" v-on:click="increasey()">Increase y</button>
+    <button class="b3" v-on:click="decreasey()">Decrease y</button></center>
+    <p>{{evaluatey}}</p>
+  <button id="b2" v-on:click='ColorGreen'> submit answer</button>
+ </div>
+   <!--question 9-->
+    <div class="box">
+ <h2>Question 9: {{Q2}}</h2>
+A: {{Quizquestion9[0].answerA}}<br>
+      <input type="text" v-model="answer4"> </input> <br>
+B: {{Quizquestion9[0].answerB}}<br>
+  <input type="text" v-model="answer5"> </input> <br>
+C: {{Quizquestion9[0].answerC}}<br>
+<input type="text" v-model="answer6"> </input> <br>
+<p></p>
+<center><button class="b3" v-on:click='total1()'>Click for total number of mistakes found</button><br>
+<p></p>
+The total number of mistakes you found are: {{answer4}} + {{answer5}} + {{answer6}} = {{totalnumber1}}<br></center>
+ <p></p>  
+  <button id="b2" v-on:click='ColorGreen'> submit answer</button>
+ </div>
+    
+   <!--question 10-->
+    <div class="box">
+      <h2>Question 10: {{Q2}}</h2>
+A: {{Quizquestion10[0].answerA}}<br>
+      <input type="text" v-model="answer1"> </input> <br>
+B: {{Quizquestion10[0].answerB}}<br>
+  <input type="text" v-model="answer2"> </input> <br>
+C: {{Quizquestion10[0].answerC}}<br>
+<input type="text" v-model="answer3"> </input> <br>
+<p></p>
+<center><button class="b3" v-on:click='total()'>Click for total number of mistakes found</button><br>
+<p></p>
+The total number of mistakes you found are: {{answer1}} + {{answer2}} + {{answer3}} = {{totalnumber}}<br></center>
+ <p></p>    
+ <button id="b2" v-on:click='ColorGreen'>submit answer</button>
+    </div>
+    <!--final submit button-->
+<center><button id="b4" v-on:click='ColorGreen'><b><router-link to="/8" id="b">{{submit}}</router-linl></b></button></center>
+  </div>
+</div>
+</script>
+
+<!--B1 quiz grammar page-->
+<script type="text/x-template" id="startredog3">
+<div>
+  <div id="app7">
+    <h1><center>B1 - Grammar Quiz</center></h1>
+   <!--question 1-->
+    <div class="box">
+ <h2>Question 1: {{Quizquestion1[0].question}}</h2>
+A: {{Quizquestion1[0].answerA}}<br>
+B: {{Quizquestion1[0].answerB}}<br>
+C: {{Quizquestion1[0].answerC}}<br>
+<p></p>
+<b>Select the correct letter: <input type="text" v-bind:title='message'v-model="Quizquestion1[0].selectedAnswer"> </input></b>
+ <p v-if="Quizquestion1[0].selectedAnswer!==Quizquestion1[0].userInput">Type in your answer!</p>
+<p v-else>Don't forget to click the submit button once you're done!</p>
+      <button id="b2" v-on:click='ColorGreen'>submit answer</button>
+    </div>
+  
+   <!--question 2-->
+    <div class="box">
+      <h2>Question 2: {{Quizquestion1[0].question}}</h2>
+A: {{Quizquestion2[0].answerA}}<br>
+B: {{Quizquestion2[0].answerB}}<br>
+C: {{Quizquestion2[0].answerC}}<br>
+<p></p>
+<b>Select the correct letter: <input type="text" v-bind:title='message'v-model="Quizquestion1[0].selectedAnswer"> </input></b>
+ <p v-if="Quizquestion1[0].selectedAnswer!==Quizquestion1[0].userInput">Type in your answer!</p>
+<p v-else>Don't forget to click the submit button once you're done!</p>
+    <button id="b2" v-on:click='ColorGreen'>submit answer</button>  
+    </div>
+    
+   <!--question 3-->
+    <div class="box">
+ <h2>Question 3: {{Quizquestion1[0].question}}</h2>
+A: {{Quizquestion3[0].answerA}}<br>
+B: {{Quizquestion3[0].answerB}}<br>
+C: {{Quizquestion3[0].answerC}}<br>
+<p></p>
+<b>Select the correct letter: <input type="text" v-bind:title='message'v-model="Quizquestion1[0].selectedAnswer"> </input></b>
+ <p v-if="Quizquestion1[0].selectedAnswer!==Quizquestion1[0].userInput">Type in your answer!</p>
+<p v-else>Don't forget to click the submit button once you're done!</p>
+      <button id="b2" v-on:click='ColorGreen'>submit answer</button>
+    </div>
+    
+   <!--question 4-->
+    <div class="box">
+      <h2>Question 4: {{Q1}}</h2>  
+  <div class="b6" v-bind:class="{applyBrown1: statusBrown1}"><button v-on:click="changeBrown1">1</button></div>
+   <p id="b5">O sana seviyor.</p>
+      
+  <div class="b6" v-bind:class="{applyBrown2: statusBrown2}"><button v-on:click='changeBrown2'>2</button></div>
+      <p id="b5">Biz birbirimizi güveniyoruz.</p>
+      
+  <div class="b6" v-bind:class="{applyBrown3: statusBrown3}"><button v-on:click='changeBrown3'>3</button></div>
+      <p id="b5">Biz birbirimizden hoşlanmıyoruz.</p>
+      
+    <div class="b6" v-bind:class="{applyBrown4: statusBrown4}"><button v-on:click='changeBrown4'>4</button></div>
+      <p id="b5">Ben ona tanıyoruz.</p>
+      <p></p>
+     <button id="b2" v-on:click='ColorGreen'>submit answer</button> 
+    </div>
+    
+   <!--question 5-->
+    <div class="box">
+      <h2>Question 5: {{Q1}}</h2>  
+  <div class="b6" v-bind:class="{applyBrown5: statusBrown5}"><button v-on:click="changeBrown5">1</button></div>
+   <p id="b5">Ömer ve Asya birbirlerine bakıyorlar.</p>
+      
+  <div class="b6" v-bind:class="{applyBrown6: statusBrown6}"><button v-on:click='changeBrown6'>2</button></div>
+      <p id="b5">Ece ve Asude birbirlerine tanıyorlar.</p>
+      
+  <div class="b6" v-bind:class="{applyBrown7: statusBrown7}"><button v-on:click='changeBrown7'>3</button></div>
+      <p id="b5">Kendime iyi hissediyorum.</p>
+      
+    <div class="b6" v-bind:class="{applyBrown8: statusBrown8}"><button v-on:click='changeBrown8'>4</button></div>
+      <p id="b5">Kendinden seviyorum.</p>
+      <p></p>
+     <button id="b2" v-on:click='ColorGreen'>submit answer</button> 
+    </div>
+    
+   <!--question 6-->
+    <div class="box">
+      <h2>Question 6: {{Q1}}</h2>  
+  <div class="b6" v-bind:class="{applyBrown9: statusBrown9}"><button v-on:click="changeBrown9">1</button></div>
+   <p id="b5">Kadının ruju kırkırmızıydı.</p>
+      
+  <div class="b6" v-bind:class="{applyBrown10: statusBrown10}"><button v-on:click='changeBrown10'>2</button></div>
+      <p id="b5">Ali upuzun bir adam.</p>
+      
+  <div class="b6" v-bind:class="{applyBrown11: statusBrown11}"><button v-on:click='changeBrown11'>3</button></div>
+      <p id="b5">Marmaray doydoluydu bugün.</p>
+      
+    <div class="b6" v-bind:class="{applyBrown12: statusBrown12}"><button v-on:click='changeBrown12'>4</button></div>
+      <p id="b5">Dün akşam gök sipsiyahtı.</p>
+      <p></p>
+     <button id="b2" v-on:click='ColorGreen'>submit answer</button> 
+    </div>
+    
+   <!--question 7-->
+    <div class="box">
+ <h2>Question 7: {{Quizquestion1[0].question}}</h2>
+1: {{Quizquestion7[0].answer1}}<br>
+2: {{Quizquestion7[0].answer2}}<br>
+3: {{Quizquestion7[0].answer3}}<br>
+4: {{Quizquestion7[0].answer4}}<br>
+  <p><b>Number of correct answer: {{x}}</b></p>
+  <center><button class="b3" v-on:click="increasex()">Increase x</button>
+    <button class="b3" v-on:click="decreasex()">Decrease x</button></center>
+    <p>{{evaluatex}}</p>
+  <button id="b2" v-on:click='ColorGreen'> submit answer</button>
+ </div>
+    
+   <!--question 8-->
+    <div class="box">
+ <h2>Question 8: {{Quizquestion1[0].question}}</h2>
+1: {{Quizquestion8[0].answer1}}<br>
+2: {{Quizquestion8[0].answer2}}<br>
+3: {{Quizquestion8[0].answer3}}<br>
+4: {{Quizquestion8[0].answer4}}<br>
+  <p><b>Number of correct answer: {{y}}</b></p>
+  <center><button class="b3" v-on:click="increasey()">Increase y</button>
+    <button class="b3" v-on:click="decreasey()">Decrease y</button></center>
+    <p>{{evaluatey}}</p>
+  <button id="b2" v-on:click='ColorGreen'> submit answer</button>
+ </div>
+   <!--question 9-->
+    <div class="box">
+ <h2>Question 9: {{Q2}}</h2>
+A: {{Quizquestion9[0].answerA}}<br>
+      <input type="text" v-model="answer4"> </input> <br>
+B: {{Quizquestion9[0].answerB}}<br>
+  <input type="text" v-model="answer5"> </input> <br>
+C: {{Quizquestion9[0].answerC}}<br>
+<input type="text" v-model="answer6"> </input> <br>
+<p></p>
+<center><button class="b3" v-on:click='total1()'>Click for total number of mistakes found</button><br>
+<p></p>
+The total number of mistakes you found are: {{answer4}} + {{answer5}} + {{answer6}} = {{totalnumber1}}<br></center>
+ <p></p>  
+  <button id="b2" v-on:click='ColorGreen'> submit answer</button>
+ </div>
+    
+   <!--question 10-->
+    <div class="box">
+      <h2>Question 10: {{Q2}}</h2>
+A: {{Quizquestion10[0].answerA}}<br>
+      <input type="text" v-model="answer1"> </input> <br>
+B: {{Quizquestion10[0].answerB}}<br>
+  <input type="text" v-model="answer2"> </input> <br>
+C: {{Quizquestion10[0].answerC}}<br>
+<input type="text" v-model="answer3"> </input> <br>
+<p></p>
+<center><button class="b3" v-on:click='total()'>Click for total number of mistakes found</button><br>
+<p></p>
+The total number of mistakes you found are: {{answer1}} + {{answer2}} + {{answer3}} = {{totalnumber}}<br></center>
+ <p></p>    
+ <button id="b2" v-on:click='ColorGreen'>submit answer</button>
+    </div>
+<!--final submit button-->
+<center><button id="b4" v-on:click='ColorGreen'><b><router-link to="/10" id="b">{{submit}}</router-link></b></button></center>
+    
+  </div>
+</div>
+</script>
+
+<!--B2 quiz grammar page-->
+<script type="text/x-template" id="startredog4">
+<div>
+  <div id="app8">
+    <h1><center>B2 - Grammar Quiz</center></h1>
+   <!--question 1-->
+    <div class="box">
+ <h2>Question 1: {{Quizquestion1[0].question}}</h2>
+A: {{Quizquestion1[0].answerA}}<br>
+B: {{Quizquestion1[0].answerB}}<br>
+<p></p>
+<b>Select the correct letter: <input type="text" v-bind:title='message'v-model="Quizquestion1[0].selectedAnswer"> </input></b>
+ <p v-if="Quizquestion1[0].selectedAnswer!==Quizquestion1[0].userInput">Type in your answer!</p>
+<p v-else>Don't forget to click the submit button once you're done!</p>
+      <button id="b2" v-on:click='ColorGreen'>submit answer</button>
+    </div>
+  
+   <!--question 2-->
+    <div class="box">
+      <h2>Question 2: {{Quizquestion2[0].question}}</h2>
+A: {{Quizquestion2[0].answerA}}<br>
+B: {{Quizquestion2[0].answerB}}<br>
+C: {{Quizquestion2[0].answerC}}<br>
+<p></p>
+<b>Select the correct letter: <input type="text" v-bind:title='message'v-model="Quizquestion1[0].selectedAnswer"> </input></b>
+ <p v-if="Quizquestion1[0].selectedAnswer!==Quizquestion1[0].userInput">Type in your answer!</p>
+<p v-else>Don't forget to click the submit button once you're done!</p>
+    <button id="b2" v-on:click='ColorGreen'>submit answer</button>  
+    </div>
+    
+   <!--question 3-->
+    <div class="box">
+ <h2>Question 3: {{Quizquestion3[0].question}}</h2>
+A: {{Quizquestion3[0].answerA}}<br>
+B: {{Quizquestion3[0].answerB}}<br>
+C: {{Quizquestion3[0].answerC}}<br>
+<p></p>
+<b>Select the correct letter: <input type="text" v-bind:title='message'v-model="Quizquestion1[0].selectedAnswer"> </input></b>
+ <p v-if="Quizquestion1[0].selectedAnswer!==Quizquestion1[0].userInput">Type in your answer!</p>
+<p v-else>Don't forget to click the submit button once you're done!</p>
+      <button id="b2" v-on:click='ColorGreen'>submit answer</button>
+    </div>
+    
+   <!--question 4-->
+    <div class="box">
+      <h2>Question 4: {{Q1}}</h2>  
+  <div class="b6" v-bind:class="{applyBrown1: statusBrown1}"><button v-on:click="changeBrown1">1</button></div>
+   <p id="b5">Annem bana iş yaptırdı.</p>
+      
+  <div class="b6" v-bind:class="{applyBrown2: statusBrown2}"><button v-on:click='changeBrown2'>2</button></div>
+      <p id="b5">Arkadaş bana kitap aldırıldı.</p>
+      
+  <div class="b6" v-bind:class="{applyBrown3: statusBrown3}"><button v-on:click='changeBrown3'>3</button></div>
+      <p id="b5">Adam öldürdü.</p>
+      
+    <div class="b6" v-bind:class="{applyBrown4: statusBrown4}"><button v-on:click='changeBrown4'>4</button></div>
+      <p id="b5">Anne yemek pişirildi.</p>
+      <p></p>
+     <button id="b2" v-on:click='ColorGreen'>submit answer</button> 
+    </div>
+    
+   <!--question 5-->
+    <div class="box">
+      <h2>Question 5: {{Q1}}</h2>  
+  <div class="b6" v-bind:class="{applyBrown5: statusBrown5}"><button v-on:click="changeBrown5">1</button></div>
+   <p id="b5">Sınıfta oturan kız çok güzel.</p>
+      
+  <div class="b6" v-bind:class="{applyBrown6: statusBrown6}"><button v-on:click='changeBrown6'>2</button></div>
+      <p id="b5">Bu grameri alan kimse var mı?</p>
+      
+  <div class="b6" v-bind:class="{applyBrown7: statusBrown7}"><button v-on:click='changeBrown7'>3</button></div>
+      <p id="b5">Ödev yapmamayan öğrencilere ceza verecek.</p>
+      
+    <div class="b6" v-bind:class="{applyBrown8: statusBrown8}"><button v-on:click='changeBrown8'>4</button></div>
+      <p id="b5">Sinemaya gelmeyeceği olacak mı?</p>
+      <p></p>
+     <button id="b2" v-on:click='ColorGreen'>submit answer</button> 
+    </div>
+    
+   <!--question 6-->
+    <div class="box">
+      <h2>Question 6: {{Q1}}</h2>  
+  <div class="b6" v-bind:class="{applyBrown9: statusBrown9}"><button v-on:click="changeBrown9">1</button></div>
+   <p id="b5">Çıkmış sokaktan geri dönmek zorunda kaldık.</p>
+      
+  <div class="b6" v-bind:class="{applyBrown10: statusBrown10}"><button v-on:click='changeBrown10'>2</button></div>
+      <p id="b5">Her sabah haşlanyan yumurta yerim.</p>
+      
+  <div class="b6" v-bind:class="{applyBrown11: statusBrown11}"><button v-on:click='changeBrown11'>3</button></div>
+      <p id="b5">Patlamış mısır yiyelim.</p>
+      
+    <div class="b6" v-bind:class="{applyBrown12: statusBrown12}"><button v-on:click='changeBrown12'>4</button></div>
+      <p id="b5">Kızarmaz patates ister mısın?</p>
+      <p></p>
+     <button id="b2" v-on:click='ColorGreen'>submit answer</button> 
+    </div>
+    
+   <!--question 7-->
+    <div class="box">
+ <h2>Question 7: {{Q1}}</h2>
+1: {{Quizquestion7[0].answer1}}<br>
+2: {{Quizquestion7[0].answer2}}<br>
+3: {{Quizquestion7[0].answer3}}<br>
+  <p><b>Number of correct answer: {{x}}</b></p>
+  <center><button class="b3" v-on:click="increasex()">Increase x</button>
+    <button class="b3" v-on:click="decreasex()">Decrease x</button></center>
+    <p>{{evaluatex}}</p>
+  <button id="b2" v-on:click='ColorGreen'> submit answer</button>
+ </div>
+    
+   <!--question 8-->
+    <div class="box">
+ <h2>Question 8: {{Q1}}</h2>
+1: {{Quizquestion8[0].answer1}}<br>
+2: {{Quizquestion8[0].answer2}}<br>
+3: {{Quizquestion8[0].answer3}}<br>
+  <p><b>Number of correct answer: {{y}}</b></p>
+  <center><button class="b3" v-on:click="increasey()">Increase y</button>
+    <button class="b3" v-on:click="decreasey()">Decrease y</button></center>
+    <p>{{evaluatey}}</p>
+  <button id="b2" v-on:click='ColorGreen'> submit answer</button>
+ </div>
+   <!--question 9-->
+    <div class="box">
+ <h2>Question 9: {{Q2}}</h2>
+A: {{Quizquestion9[0].answerA}}<br>
+      <input type="text" v-model="answer4"> </input> <br>
+B: {{Quizquestion9[0].answerB}}<br>
+  <input type="text" v-model="answer5"> </input> <br>
+C: {{Quizquestion9[0].answerC}}<br>
+<input type="text" v-model="answer6"> </input> <br>
+<p></p>
+<center><button class="b3" v-on:click='total1()'>Click for total number of mistakes found</button><br>
+<p></p>
+The total number of mistakes you found are: {{answer4}} + {{answer5}} + {{answer6}} = {{totalnumber1}}<br></center>
+ <p></p>  
+  <button id="b2" v-on:click='ColorGreen'> submit answer</button>
+ </div>
+    
+   <!--question 10-->
+    <div class="box">
+      <h2>Question 10: {{Q2}}</h2>
+A: {{Quizquestion10[0].answerA}}<br>
+      <input type="text" v-model="answer1"> </input> <br>
+B: {{Quizquestion10[0].answerB}}<br>
+  <input type="text" v-model="answer2"> </input> <br>
+C: {{Quizquestion10[0].answerC}}<br>
+<input type="text" v-model="answer3"> </input> <br>
+<p></p>
+<center><button class="b3" v-on:click='total()'>Click for total number of mistakes found</button><br>
+<p></p>
+The total number of mistakes you found are: {{answer1}} + {{answer2}} + {{answer3}} = {{totalnumber}}<br></center>
+ <p></p>    
+ <button id="b2" v-on:click='ColorGreen'>submit answer</button>
+    </div>
+   <center><button id="b4" v-on:click='ColorGreen'><b><router-link to="/12" id="b">{{submit}}</router-link></b></button></center> 
+  </div>
+</div>
+</script>
+
+ <!--A1 vocab answers-->
+<script type="text/x-template" id="score1">
+<div>
+  <h1><center>Answers</center></h1>
+ <div class="box"> 
+  <h3>Answer 1: B</h3>
+  <h3>Answer 2: C</h3>
+  <h3>Answer 3: B</h3>
+  <h3>Answer 4: C</h3>
+  <h3>Answer 5: 4th</h3>
+  <h3>Answer 6: 1st</h3>
+  <h3>Answer 7: 4th</h3>
+  <h3>Answer 8: 3</h3>
+  <h3>Answer 9: 4</h3>
+  <h3>Answer 10: 1</h3></div>
+</div>
+</script>
+
+<!--A2 vocab answers-->
+<script type="text/x-template" id="score3">
+<div>
+  <h1><center>Answers</center></h1>
+   <div class="box"> 
+  <h3>Answer 1: A</h3>
+  <h3>Answer 2: D</h3>
+  <h3>Answer 3: B</h3>
+  <h3>Answer 4: D</h3>
+  <h3>Answer 5: 2nd</h3>
+  <h3>Answer 6: 3rd</h3>
+  <h3>Answer 7: 1s</h3>
+  <h3>Answer 8: 4</h3>
+  <h3>Answer 9: 2</h3>
+  <h3>Answer 10: 4</h3></div>
+</div>
+</script>
+
+<!--B1 vocab answers-->
+<script type="text/x-template" id="score5">
+<div>
+  <h1><center>Answers</center></h1>
+   <div class="box"> 
+  <h3>Answer 1: D</h3>
+  <h3>Answer 2: A</h3>
+  <h3>Answer 3: B</h3>
+  <h3>Answer 4: A</h3>
+  <h3>Answer 5: 2nd</h3>
+  <h3>Answer 6: 1st</h3>
+  <h3>Answer 7: 4th</h3>
+  <h3>Answer 8: 3</h3>
+  <h3>Answer 9: 3</h3>
+  <h3>Answer 10: 2</h3></div>
+</div>
+</script>
+
+<!--B2 vocab answers-->
+<script type="text/x-template" id="score7">
+<div>
+  <h1><center>Answers</center></h1>
+   <div class="box"> 
+  <h3>Answer 1: B</h3>
+  <h3>Answer 2: C</h3>
+  <h3>Answer 3: D</h3>
+  <h3>Answer 4: B</h3>
+  <h3>Answer 5: 1st</h3>
+  <h3>Answer 6: 2nd</h3>
+  <h3>Answer 7: 3rd</h3>
+  <h3>Answer 8: 3</h3>
+  <h3>Answer 9: 1</h3>
+  <h3>Answer 10: 4</h3></div>
+</div>
+</script>
+
+<!--A1 grammar answers-->
+<script type="text/x-template" id="score2">
+<div>
+  <div class="box"><h1><center>Answers</center></h1>
+   <h3>Answer 1: C</h3>
+  <h3>Answer 2: C</h3>
+  <h3>Answer 3: A</h3>
+  <h3>Answer 4: 3</h3>
+  <h3>Answer 5: 1</h3>
+  <h3>Answer 6: 2</h3>
+  <h3>Answer 7: 1</h3>
+  <h3>Answer 8: 1</h3>
+  <h3>Answer 9: 4</h3>
+    <h3>Answer 10: 5</h3></div>
+</div>
+</script>
+
+<!--A2 grammar answers-->
+<script type="text/x-template" id="score4">
+<div>
+  <h1><center>Answers</center></h1>
+   <div class="box"> 
+  <h3>Answer 1: A</h3>
+  <h3>Answer 2: B</h3>
+  <h3>Answer 3: C</h3>
+  <h3>Answer 4: 3</h3>
+  <h3>Answer 5: 2</h3>
+  <h3>Answer 6: 1</h3>
+  <h3>Answer 7: 3</h3>
+  <h3>Answer 8: 1</h3>
+  <h3>Answer 9: 5</h3>
+  <h3>Answer 10: 5</h3></div>
+</div>
+</script>
+
+<!--B1 grammar score-->
+<script type="text/x-template" id="score6">
+<div>
+  <h1><center>Score</center></h1>
+   <div class="box"> 
+  <h3>Answer 1: A</h3>
+  <h3>Answer 2: A</h3>
+  <h3>Answer 3: B</h3>
+  <h3>Answer 4: 2</h3>
+  <h3>Answer 5: 1</h3>
+  <h3>Answer 6: 2</h3>
+  <h3>Answer 7: 1</h3>
+  <h3>Answer 8: 3</h3>
+  <h3>Answer 9: 2</h3>
+  <h3>Answer 10: 2</h3></div>
+</div>
+</script>
+
+<!--B2 grammar score-->
+<script type="text/x-template" id="score8">
+<div>
+  <h1><center>Score</center></h1>
+   <div class="box"> 
+  <h3>Answer 1: B</h3>
+  <h3>Answer 2: B</h3>
+  <h3>Answer 3: C</h3>
+  <h3>Answer 4: 3</h3>
+  <h3>Answer 5: 1</h3>
+  <h3>Answer 6: 3</h3>
+  <h3>Answer 7: 3</h3>
+  <h3>Answer 8: 3</h3>
+  <h3>Answer 9: 4</h3>
+  <h3>Answer 10: 4</h3></div>
+</div>
+</script>
+</div>
+  
+
+  
+ 
