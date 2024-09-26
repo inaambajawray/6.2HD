@@ -1,0 +1,8 @@
+{
+  "name": "Quiz-Web-Application",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "echo 'Building the application...' && mkdir -p dist && cp index.html script.js style.css dist/",
+    "test": "echo 'Running tests...' && npx cypress run"
+  }
+}
