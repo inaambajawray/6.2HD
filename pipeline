@@ -1,5 +1,10 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'cypress/included:13.15.0'
+            args '-u root:root' // Optional: run as root if needed
+        }
+    }
 
     stages {
         stage('Build') {
@@ -30,10 +35,9 @@ pipeline {
         stage('Test') {
             steps {
                 script {
-                    // run tests
-                    echo 'Running tests...'
-
-
+                    // Run Cypress tests
+                    echo 'Running Cypress tests...'
+                    sh 'npx cypress run'
                 }
             }
             post {
@@ -51,7 +55,6 @@ pipeline {
                 script {
                     // Deploy the application
                     echo 'Deploying the application...'
-
                 }
             }
             post {
