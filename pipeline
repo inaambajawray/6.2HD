@@ -10,7 +10,7 @@ pipeline {
                     
                     // Build the code
                     echo 'Building the code...'
-                    sh 'npm install'
+                    sh 'sudo npm install'
                     sh 'npm run build'
                     
                     // Archive the build artifact to preserve it
