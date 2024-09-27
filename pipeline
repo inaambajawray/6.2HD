@@ -69,7 +69,7 @@ pipeline {
                   // Use curl to deploy to the release channel
                   sh """
                   curl -X POST ${releaseChannelUrl} \
-                 -H "Authorization: token ${GithubToken}" \
+                 -H "Authorization: token ${GITHUB_TOKEN}" \
                  -H "Content-Type: application/json" \
                  -d '${releaseData}'
                   """
