@@ -51,7 +51,7 @@ pipeline {
                     // Deploy the application
                     echo 'Deploying the application...'
                    // Define URL
-                    def releaseChannelUrl = 'https://github.com/inaambajawray/6.2HD.git'
+                    def releaseChannelUrl = 'https://api.github.com/repos/inaambajawray/6.2HD/releases'
                     def releaseData = '''
                     {
                         "tag_name": "v1.0.0",
