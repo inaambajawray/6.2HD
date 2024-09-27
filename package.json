@@ -6,7 +6,8 @@
     "test": "echo 'Testing the application...' && jest"
   },
   "devDependencies": {
-    "jest": "29.7.0"
+    "jest": "29.7.0",
+    "vue-jest": "3.0.7"
   },
   "jest": {
     "moduleFileExtensions": ["js", "json", "vue"],
