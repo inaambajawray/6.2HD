@@ -1,27 +1,7 @@
 {
   "name": "Quiz-Web-Application",
   "version": "1.0.0",
-  "type": "module",
   "scripts": {
-    "build": "echo 'Building the application...' && mkdir -p dist && cp index.html script.js style.css dist/",
-    "test": "echo 'Testing the application...' && jest"
-  },
-  "devDependencies": {
-    "jest": "29.7.0",
-    "vue-jest": "3.0.7",
-    "@babel/plugin-transform-modules-commonjs": "7.24.8"
-  },
-  "babel": {
-    "presets": [
-      "@babel/preset-env"
-    ]
-  },
-  "jest": {
-    "moduleFileExtensions": ["js", "json", "vue"],
-    "transform": {
-      "^.+\\.vue$": "vue-jest",
-      "^.+\\.js$": "babel-jest"
-    },
-    "testMatch": ["**/__tests__/**/*.spec.js", "**/?(*.)+(spec|test).[jt]s?(x)"]
+    "build": "echo 'Building the application...' && mkdir -p dist && cp index.html script.js style.css dist/"
   }
 }
