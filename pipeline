@@ -32,7 +32,7 @@ pipeline {
                 script {
                     // Run tests
                     echo 'Running tests...'
-                    sh 'mvn test'
+                    sh "${tool 'maven'}/bin/mvn test"
                 }
             }
             post {
