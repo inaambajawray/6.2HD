@@ -8,4 +8,12 @@
   "devDependencies": {
     "jest": "29.7.0"
   }
+  "jest": {
+    "moduleFileExtensions": ["js", "json", "vue"],
+    "transform": {
+      "^.+\\.vue$": "vue-jest",
+      "^.+\\.js$": "babel-jest"
+    },
+    "testMatch": ["**/__tests__/**/*.spec.js", "**/?(*.)+(spec|test).[jt]s?(x)"]
+  }
 }
