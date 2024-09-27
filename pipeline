@@ -30,8 +30,8 @@ pipeline {
         stage('Test') {
             steps {
                 script {
-                    // Run Cypress tests
-                    echo 'Running Cypress tests...'
+                    // Run tests
+                    echo 'Running tests...'
                     sh 'npx playwright test'
                 }
             }
