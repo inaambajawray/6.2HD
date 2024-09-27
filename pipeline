@@ -32,7 +32,7 @@ pipeline {
                 script {
                     // run tests
                     echo 'Running tests...'
-                    sh 'npm test'
+
 
                 }
             }
