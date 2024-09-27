@@ -1,8 +1,5 @@
 pipeline {
     agent any
-    environment {
-        GITHUB_TOKEN = credentials('GithubToken')
-    }
 
     stages {
         stage('Build') {
@@ -68,7 +65,7 @@ pipeline {
                   // Use curl to deploy to the release channel
                   sh """
                   curl -X POST ${releaseChannelUrl} \
-                 -H "Authorization: token ${GITHUB_TOKEN}" \
+                 -H "Authorization: token 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" \
                  -H "Content-Type: application/json" \
                  -d '${releaseData}'
                   """
