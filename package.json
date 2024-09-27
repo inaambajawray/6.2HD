@@ -5,4 +5,7 @@
     "build": "echo 'Building the application...' && mkdir -p dist && cp index.html script.js style.css dist/",
     "test": "echo 'Testing the application...' && jest"
   }
+  "devDependencies": {
+    "jest": "29.7.0"
+  }
 }
