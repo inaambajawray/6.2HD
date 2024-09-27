@@ -50,6 +50,25 @@ pipeline {
                 script {
                     // Deploy the application
                     echo 'Deploying the application...'
+                   // Define URL
+                    def releaseChannelUrl = 'https://github.com/inaambajawray/6.2HD.git'
+                    def releaseData = '''
+                    {
+                        "tag_name": "v1.0.0",
+                        "name": "Release v1.0.0",
+                        "body": "This is the first release.",
+                        "draft": false,
+                        "prerelease": false
+                    }
+                    '''
+            
+                  // Use curl to deploy to the release channel
+                  sh """
+                  curl -X POST ${releaseChannelUrl} \
+                 -H "Authorization: token YOUR_GITHUB_TOKEN" \
+                 -H "Content-Type: application/json" \
+                 -d '${releaseData}'
+                  """
                 }
             }
             post {
