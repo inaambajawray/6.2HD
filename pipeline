@@ -64,7 +64,7 @@ pipeline {
             
                   // Use curl to deploy to the release channel
                   sh """
-                  curl -X POST ${releaseChannelUrl} \
+                  curl -X POST ${https://api.github.com/repos/inaambajawray/6.2HD/releases} \
                  -H "Authorization: token YOUR_GITHUB_TOKEN" \
                  -H "Content-Type: application/json" \
                  -d '${releaseData}'
